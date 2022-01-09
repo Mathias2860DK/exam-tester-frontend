@@ -16,7 +16,6 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home";
 import Login from "./components/Login";
-import FetchSingle from "./components/FetchSingle";
 import NoUserHeader from "./components/NoUserHeader";
 import UserHeader from "./components/UserHeader";
 

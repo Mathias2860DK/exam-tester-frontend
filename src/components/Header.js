@@ -11,8 +11,8 @@ function Header({ loggedIn, logout, validateAccess }) {
       </li>
 
       <li>
-        <NavLink exact activeClassName="active" to="/fetch-single">
-          FetchSingle
+        <NavLink exact activeClassName="active" to="/shared-rescource">
+          Tilgåes af alle
         </NavLink>
       </li>
       {!loggedIn ? (
@@ -35,8 +35,8 @@ function Header({ loggedIn, logout, validateAccess }) {
 
           {validateAccess === "admin" ? (
             <li>
-              <NavLink exact activeClassName="active" to="/fetch-parallelly">
-                Fetch parallelly
+              <NavLink exact activeClassName="active" to="/create-boat">
+                Create boat
               </NavLink>
             </li>
           ) : (

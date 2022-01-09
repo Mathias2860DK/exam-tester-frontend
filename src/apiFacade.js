@@ -88,6 +88,12 @@ const registerUser = (registerCredentials) => {
       handleHttpErrors
     );
   };
+
+  const createBoat = (boat) => {
+     const options = makeOptions('POST',true,boat);
+     return fetch(URL + "/api/admin/createBoat", options)
+       .then(handleHttpErrors);
+   }
   const makeOptions = (method, addToken, body) => {
     var opts = {
       method: method,
@@ -119,7 +125,8 @@ const registerUser = (registerCredentials) => {
     fetchAlotDataParallel,
     validateAccess,
     handleError,
-    registerUser
+    registerUser,
+    createBoat
   };
 }
 const facade = apiFacade();

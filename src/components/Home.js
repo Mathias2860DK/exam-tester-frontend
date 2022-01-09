@@ -7,20 +7,20 @@ function Home() {
         <Row className="rows">
           <Col xs={2} className="columns"></Col>
           <Col className="columns">
-            <h1 className="text-center mt-3">Fetch data from random API's!</h1>
+            <h1 className="text-center mt-3">Welcome!</h1>
             <br></br>
             <h3>
               <strong>Functionalities</strong>
             </h3>
             <p>
-              <strong>No Login</strong>: Home, FetchSingle and Login
+              <strong>No Login</strong>: No functionality
             </p>
             <p>
-              <strong>User</strong> : Home, FetchSingle, FetchSequentially and
+              <strong>User</strong> : Home... and
               Logout
             </p>
             <p>
-              <strong>Admin</strong>: Home, FetchSingle, FetchParallel and
+              <strong>Admin</strong>: Home, create new boat, update information and
               Logout
             </p>
             <br></br>
