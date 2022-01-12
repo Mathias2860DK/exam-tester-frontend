@@ -68,3 +68,8 @@ input {
 .columns {
   border: 2px solid black;
 }*/
+
+.table-layout{
+table-layout: fixed;
+width: 200%;
+}

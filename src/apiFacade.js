@@ -94,6 +94,28 @@ const registerUser = (registerCredentials) => {
      return fetch(URL + "/api/admin/createBoat", options)
        .then(handleHttpErrors);
    }
+
+    const getAllBoats = () => {
+      const options = makeOptions("GET", true); //True add's the token
+      return fetch(URL + "/api/admin/getAllBoats", options).then(handleHttpErrors);
+    };
+
+     const getAllInfoByBoatId = (boatId) => {
+       const options = makeOptions("GET", true); //True add's the token
+       return fetch(
+         URL + "/api/admin/getAllInfoByBoatId/" + boatId,
+         options
+       ).then(handleHttpErrors);
+     };
+
+     const editBoat = (boat, boatId) => {
+       const options = makeOptions("PUT", true, boat);
+       return fetch(URL + "/api/admin/editBoat/" + boatId, options).then(
+         handleHttpErrors
+       );
+     };
+
+
   const makeOptions = (method, addToken, body) => {
     var opts = {
       method: method,
@@ -126,7 +148,10 @@ const registerUser = (registerCredentials) => {
     validateAccess,
     handleError,
     registerUser,
-    createBoat
+    createBoat,
+    getAllBoats,
+    getAllInfoByBoatId,
+    editBoat,
   };
 }
 const facade = apiFacade();

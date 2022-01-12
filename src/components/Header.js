@@ -34,11 +34,18 @@ function Header({ loggedIn, logout, validateAccess }) {
           )}
 
           {validateAccess === "admin" ? (
+            <>
             <li>
               <NavLink exact activeClassName="active" to="/create-boat">
                 Create boat
               </NavLink>
             </li>
+             <li>
+              <NavLink exact activeClassName="active" to="/overview">
+                Overview
+              </NavLink>
+            </li>
+            </>
           ) : (
             ""
           )}

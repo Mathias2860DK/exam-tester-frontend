@@ -13,6 +13,7 @@ import Home from "./Home";
 import FetchSequentially from "./FetchSequentially";
 import CreateBoat from "./CreateBoat"
 import NoMatch from "./NoMatch";
+import Overview from "./Overview";
 
 function UserHeader(props) {
   const { loggedIn, logout, validateAccess } = props;
@@ -41,6 +42,14 @@ function UserHeader(props) {
         ) : (
           ""
         )}
+        {validateAccess === "admin" ? (
+          <Route path="/overview">
+            <Overview />
+          </Route>
+        ) : (
+          ""
+        )}
+
         <Route path="*">
           <NoMatch />
         </Route>
